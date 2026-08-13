@@ -2,7 +2,8 @@
 
 ### Credits
 
-- @nahkd123 (PTK-470 & 670 Configuration / Parsers)
+- @kuuuube (Artisul D16 Configuration / Parsers)
+- @nahkd123 (Wacom PTK-470 & 670 Configuration / Parsers)
 
 ### Download
 
@@ -14,7 +15,7 @@ Pick the configuration override for your tablet [In the Configurations Directory
 1. Open the Plugin Manager,
 2. Go to File > Install Plugin...,
 3. Look for the downloaded Dll file,
-4. Look for the downloaded Configuration Override for you tablet,
+4. Look for the downloaded Configuration Override for your tablet,
 5. Create a `Configurations` in the appropriate location :
     - For Windows : It needs to be placed next to `OpenTabletDriver.Daemon.exe`
     - For Linux : `~/.config/OpenTabletDriver/Configurations/` or `~/.local/share/OpenTabletDriver/Configurations/`
