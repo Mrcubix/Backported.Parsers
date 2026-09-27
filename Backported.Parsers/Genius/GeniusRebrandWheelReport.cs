@@ -1,8 +1,9 @@
+using OpenTabletDriver.Plugin.Tablet;
 using OpenTabletDriver.Plugin.Tablet.Wheel;
 
 namespace Backported.Parsers.Genius;
 
-public struct GeniusRebrandWheelReport(byte[] data) : IRelativeWheelReport, IWheelButtonReport
+public struct GeniusRebrandWheelReport(byte[] data) : IAuxReport, IRelativeWheelReport, IWheelButtonReport
 {
     public byte[] Raw { get; set; } = data;
     public int[] AnalogDeltas { get; set; } = 
@@ -14,5 +15,11 @@ public struct GeniusRebrandWheelReport(byte[] data) : IRelativeWheelReport, IWhe
         [
             data[3] == 0x01
         ]
+    ];
+    public bool[] AuxButtons { get; set; } = 
+    [
+        data[1].IsBitSet(2),
+        data[1].IsBitSet(3),
+        data[1].IsBitSet(4),
     ];
 }
